@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klave's Christening Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="guest-list" class="screen active">
+        <div class="container">
+            <div class="header">
+                <div class="sparkle">✨</div>
+                <h1>You're Invited!</h1>
+                <div class="sparkle">✨</div>
+            </div>
+            <p class="subtitle">Please find your name below to view Klave's special Christening invitation</p>
+            <div class="guest-grid" id="guestGrid"></div>
+        </div>
+    </div>
+
+    <div id="welcome" class="screen">
+        <div class="container">
+            <div class="card">
+                <div class="heart">🙏</div>
+                <h2 id="welcomeName">Welcome!</h2>
+                <p class="welcome-text">
+                    We are absolutely blessed that you're here! Your presence would make Klave's Christening celebration
+                    even more
+                    meaningful and special. We have prepared something very special for you, and we hope you'll be part
+                    of this sacred
+                    and joyous occasion with us as we celebrate this important milestone in Klave's spiritual journey.
+                </p>
+                <button class="btn btn-primary" onclick="showScreen('attendance')">Proceed to Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="attendance" class="screen">
+        <div class="container">
+            <div class="card">
+                <div class="image-container question-image">
+                    <img src="image/klave.jfif" alt="Event Photo" class="placeholder-img">
+                </div>
+                <h2>Will you come to Klave's Christening?</h2>
+                <p>We would be deeply honored to have you witness this sacred moment with us!</p>
+                <div class="button-group">
+                    <button class="btn btn-yes" onclick="showScreen('ninang-ninong')">YES! 🙏</button>
+                    <button class="btn btn-no" id="attendanceNo" onclick="handleNoClick(event)">No 😢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ninang-ninong" class="screen">
+        <div class="container">
+            <div class="card">
+                <div class="image-container question-image">
+                    <img src="image/klave.jfif" alt="Godparent Photo" class="placeholder-img">
+                </div>
+                <div class="gift">👼</div>
+                <h2>Would you like to be Klave's Ninang/Ninong?</h2>
+                <p>We would be deeply honored if you would accept this sacred role as Klave's godparent in this blessed
+                    celebration!</p>
+                <div class="button-group">
+                    <button class="btn btn-yes" onclick="showScreen('invitation')">YES! 💙</button>
+                    <button class="btn btn-no" id="ninangNo" onclick="handleNoClick(event)">No 😔</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="invitation" class="screen">
+        <div class="confetti-container" id="confettiContainer"></div>
+        <div class="container">
+            <div class="invitation-card">
+                <div class="thank-you">
+                    <h1 id="thankYouName">Thank You!</h1>
+                    <div class="hearts">
+                        <span class="heart-icon">🙏</span>
+                        <span class="sparkle-icon">✨</span>
+                        <span class="heart-icon">👼</span>
+                    </div>
+                </div>
+
+                <div class="main-invitation">
+                    <div class="image-container main-image">
+                        <img src="image/klave.jfif" alt="Klave's Photo" class="placeholder-img">
+                    </div>
+
+                    <h2>🙏 CHRISTENING INVITATION 👼</h2>
+                    <p class="invite-text">You are cordially invited to witness the sacred</p>
+                    <h3 class="event-title">Christening Ceremony</h3>
+                    <p class="invite-text">of our beloved</p>
+                    <h3 class="christening-name">Klave</h3>
+
+                    <div class="event-details">
+                        <div class="detail-item">
+                            <strong>📅 Date:</strong>
+                            <p>Sunday, April 20, 2025</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>⏰ Time:</strong>
+                            <p>10:00 AM - 3:00 PM</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>⛪ Church:</strong>
+                            <p>St. Mary's Cathedral<br>123 Faith Street</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>🍽️ Reception:</strong>
+                            <p>Grand Ballroom<br>Elegant Events Center</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>👗 Dress Code:</strong>
+                            <p>Sunday Best<br>Light Colors Preferred</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>🎁 Gift Suggestion:</strong>
+                            <p>Prayers & Blessings<br>Books or Keepsakes</p>
+                        </div>
+                    </div>
+
+                    <div class="special-note">
+                        <p><strong>Special Note for our Ninang/Ninong:</strong></p>
+                        <p>Thank you for accepting this sacred honor! Please arrive 30 minutes early at the church for a
+                            brief coordination with the priest. Your spiritual guidance and blessing mean the world to
+                            us and to Klave's faith journey.</p>
+                    </div>
+
+                    <div class="rsvp-info">
+                        <p>RSVP: Please confirm your attendance by April 10, 2025</p>
+                        <p>"Let the little children come to me, and do not hinder them, for the kingdom of heaven
+                            belongs to such as these." - Matthew 19:14</p>
+                    </div>
+                </div>
+
+                <div class="closing">
+                    <p>We can't wait to celebrate this blessed day with you! 🙏</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
